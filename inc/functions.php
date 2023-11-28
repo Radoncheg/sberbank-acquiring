@@ -34,7 +34,6 @@ function save($table, $data): int|string|null
         $tbl->$key = $value;
     }
     $orderId = R::store($tbl);
-//`  R::exec('UPDATE orders SET status_id=3 WHERE id=' . $orderId); возможно этот статус лишний
     sendRequest();
     return $orderId;
 
